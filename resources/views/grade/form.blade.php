@@ -13,7 +13,7 @@
             {!! $errors->first('maths_grade', '<div class="invalid-feedback">:message</div>') !!}
         </div> -->
 
-        <!-- <div class="form-group">
+        <!-- <div class="form-group"> 
         {{ Form::label('student_id') }}
         {{ Form::select('student_id', $students, $grade->student_id, ['class' => 'formcontrol' . ($errors->has('student_id') ? ' is-invalid' : ''), 'placeholder' => 'Student Id']) }}
         {!! $errors->first('student_id', '<div class="invalid-feedback">:message</div>')!!}
