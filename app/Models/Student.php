@@ -21,8 +21,12 @@ class Student extends Model
 {
     
     static $rules = [
-		'name' => 'required',
-		'email' => 'required',
+      'name' => 'required',
+      'surname' => 'required',
+      'email' => 'required',
+      'currentTerm' => 'required',
+      'img' => 'required',
+      'isTeacher' => 'required',
     ];
 
     protected $perPage = 20;
