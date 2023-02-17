@@ -9,12 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations. 
      */
-    public function up(): void
+    public function up(): void 
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('surname',150);
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->string('currentTerm');
+            $table->string('img');
+            $table->boolean('isTeacher')->default(false);
+            $table->rememberToken();
             $table->timestamps();
         });
     }
