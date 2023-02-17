@@ -25,6 +25,10 @@
                             {{ $student->name }}
                         </div>
                         <div class="form-group">
+                            <strong>Surname:</strong>
+                            {{ $student->surname }}
+                        </div>
+                        <div class="form-group">
                             <strong>Email:</strong>
                             {{ $student->email }}
                         </div>

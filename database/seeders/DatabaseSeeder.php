@@ -109,5 +109,7 @@ class DatabaseSeeder extends Seeder
         'img' => 'img/nevermoreTeacher.PNG',
         'isTeacher' => '1',
         ]); */
+
+        Student::factory(5)->create();
     }
 }

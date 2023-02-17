@@ -37,6 +37,7 @@
                                         <th>No</th>
                                         
 										<th>Name</th>
+                                        <th>Surname</th>
 										<th>Email</th>
 
                                         <th></th>
@@ -48,6 +49,7 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $student->name }}</td>
+                                            <td>{{ $student->surname }}</td>
 											<td>{{ $student->email }}</td>
 
                                             <td>
