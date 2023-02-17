@@ -9,13 +9,18 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('grades', function (Blueprint $table) {
-            $table->id();
-            $table->float('maths_grade');
-            $table->unsignedBigInteger('student_id');
-            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade'); 
+            $table->bigIncrements('id');
+            $table->bigInteger('student_id')->unsigned();
+            $table->string('subject');
+            $table->integer('grade');
+            $table->integer('exam');
+            $table->integer('trimester');
+            $table->integer('year');
+            $table->string('schoolTerm',9);
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -23,7 +28,7 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('grades');
     }
