@@ -36,8 +36,7 @@ class StudentController extends Controller
         $student = new Student();
         
         return view('student.create', compact('student'));
-    }
-     
+    }     
     /**
      * Store a newly created resource in storage.
      *
