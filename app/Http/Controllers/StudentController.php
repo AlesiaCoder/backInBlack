@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Grade;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 /**
  * Class StudentController
@@ -32,9 +34,10 @@ class StudentController extends Controller
     public function create()
     {
         $student = new Student();
+        
         return view('student.create', compact('student'));
     }
-
+     
     /**
      * Store a newly created resource in storage.
      *
